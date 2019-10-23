@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Display flex test</title>
+</head>
+<style>
+  .container {
+    width: 300px;
+    height: 300px;
+    color: #fff;
+    background: #eee;
+    display: flex;
+    flex-flow: wrap;
+    /* align-content: flex-start; */
+    /* align-content: flex-end; */
+    align-content: center;
+    /* align-content: stretch; */
+    /* align-content: space-around; */
+  }
+
+  .box {
+    width: 80px;
+    height: 80px;
+  }
+  .box-1 { background: tomato; }
+  .box-2 { background: slategray; }
+  .box-3 { background: pink; }
+  .box-4 { background: skyblue; }
+  .box-5 { background: limegreen; }
+
+</style>
+<body>
+  <div class="container">
+    <div class="box box-1">1</div>
+    <div class="box box-2">2</div>
+    <div class="box box-3">3</div>
+    <div class="box box-4">4</div>
+    <div class="box box-5">5</div>
+  </div>
+</body>
+</html>

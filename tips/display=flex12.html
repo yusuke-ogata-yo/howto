@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Display flex test</title>
+</head>
+<style>
+  .container {
+    width: 300px;
+    height: 300px;
+    color: #fff;
+    background: #eee;
+    display: flex;
+    /* flex-flow: wrap; */
+  }
+
+  .box {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* ----------------------------------------
+    flex-grown の分配の計算方法
+    今回の例では、container の width: 300px
+    flex-basis: 120px なので、はみ出た部分の大きさは、
+    300px - (120px * 3) = 60px
+    60px を1:2:3の比で分配するため
+    10px:20px:30pxを小さくする
+    box1のwidth: 110px;
+    box2のwidth: 90px;
+    box3のwidth: 80px;
+  ------------------------------------------- */
+  
+  .box-1 { 
+    background: tomato;
+    flex: 0 1 120px;
+  }
+  .box-2 { 
+    background: slategray; 
+    flex: 0 2 120px;
+  }
+  .box-3 { 
+    background: pink;
+    flex: 0 3 120px;
+  }
+
+</style>
+<body>
+  <div class="container">
+    <div class="box box-1">1</div>
+    <div class="box box-2">2</div>
+    <div class="box box-3">3</div>
+  </div>
+</body>
+</html>

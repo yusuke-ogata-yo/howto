@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Flexbox</title>
+  <style>
+    header, footer {
+      background: #eee;
+    }
+    .container {
+      display: flex;
+    }
+    .left {
+      /* flex-grow: 0; を左右に設定し、幅が変わらないようにする */
+      flex: 0 100px;
+      background: tomato;
+    }
+    .right {
+      /* flex-grow: 0; を左右に設定し、幅が変わらないようにする */
+      flex: 0 100px;
+      background: pink;
+    }
+    .center {
+      /* flex-grow: 1; をcenterに設定するところがポイント */
+      flex: 1;
+      background: skyblue;
+    }
+    @media all and (max-width: 500px) {
+    .container {
+      flex-direction: column;
+    }
+    .center {
+      order: 1;
+      flex: 100%;
+    }
+    .left {
+      order: 2;
+      flex: 100%;
+    }
+    .right {
+      order: 3;
+      flex: 100%;
+    }
+  }
+  </style>
+</head>
+<body>
+  <header>header</header>
+  <div class="container">
+    <div class="left">left</div>
+    <div class="center">center</div>
+    <div class="right">right</div>
+  </div>
+  <footer>footer</footer>
+</body>
+</html>
