@@ -1,0 +1,6 @@
+set-alias vi 'C:\Program Files (x86)\Vim\Vim81\vim.exe'
+
+$Now = Get-Date
+$logPath = "E:\powershellLog\"
+$logfileName = $logPath + $Now.ToString("yyyy-MM-dd-HHmmss") + ".log"
+Start-Transcript $logfileName
