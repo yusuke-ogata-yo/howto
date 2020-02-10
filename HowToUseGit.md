@@ -121,7 +121,7 @@ git clone を実施したディレクトリに、「Javascript-train.omikuji.sam
 git push origin master
 ```
 
-## リポジトリをローカルリポジトリに反映するとき
+## リポジトリを手元にコピーするとき
 ```bash
 git pull origin master
 ```
