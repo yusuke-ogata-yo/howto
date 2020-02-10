@@ -80,6 +80,7 @@ The key's randomart image is:
 - id_rsa : 秘密鍵
 - id_rsa.pub : 公開鍵
 
+**秘密鍵の名前は"id_rsa"でなければならない**
 
 
 ## githubへの公開鍵の登録
@@ -104,6 +105,9 @@ git commit -m "first commit"
 git remote add origin git@github.com:yusuke-ogata-yo/Javascript-train.omikuji.sample.git
 git push -u origin master
 ```
+
+git init は、そのディレクトリに".git"を作成しレポジトリを作る操作。git clone をする場合は不要。
+
 #### 参考サイト
 
 dotinstall.com  
