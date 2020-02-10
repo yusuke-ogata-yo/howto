@@ -95,10 +95,19 @@ The key's randomart image is:
 
 # gitの操作
 
+## 簡単操作
+```bash
+echo "# Javascript-train.omikuji.sample" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:yusuke-ogata-yo/Javascript-train.omikuji.sample.git
+git push -u origin master
+```
 #### 参考サイト
 
-dotinstall.com
-
+dotinstall.com  
+[github](https://github.com/yusuke-ogata-yo/Javascript-train.omikuji.sample)
 
 
 ## #04. gitの設定
