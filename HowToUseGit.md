@@ -95,8 +95,10 @@ The key's randomart image is:
    - Key:先程作成した公開鍵の中身を貼り付けます。(c:\home.ssh\id_rsa.pub)
 
 # gitの操作
-
 ## 簡単操作
+とりあえずgitを使ってみるための操作集。ブランチの使い方はこれから勉強。
+
+## リポジトリを新規作成の場合
 ```bash
 echo "# Javascript-train.omikuji.sample" >> README.md
 git init
@@ -107,6 +109,22 @@ git push -u origin master
 ```
 
 git init は、そのディレクトリに".git"を作成しレポジトリを作る操作。git clone をする場合は不要。
+
+## クローンする場合
+```bash
+git clone git@github.com:yusuke-ogata-yo/Javascript-train.omikuji.sample.git
+```
+git clone を実施したディレクトリに、「Javascript-train.omikuji.sample」というディレクトリが作成され、ファイルが配置される
+
+## リポジトリにアップするとき
+```bash
+git push origin master
+```
+
+## リポジトリをローカルリポジトリに反映するとき
+```bash
+git pull origin master
+```
 
 #### 参考サイト
 
