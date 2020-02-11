@@ -31,6 +31,36 @@ git push origin master
 git pull origin master
 ```
 
+# ブランチの利用
+## ブランチの確認
+```bash
+git branch
+```
+## ブランチの作成
+```bash
+git branch xxx
+```
+## ブランチの切り替え
+```bash
+git checkout xxx
+```
+
+ブランチに対して、add や commit を行える
+
+## ブランチのpush
+```bash
+git push -u origin xxx
+```
+初めてブランチをpushするときは、-u オプションを使うとよい。
+使わないと、リモートリポジトリにブランチがないため以下のエラーが出た。
+```bash
+error: src refspec xxx does not match any
+```
+
+現在のブランチ(HEADの場合)へ簡単にpushする方法
+```bash
+git push origin HEAD
+```
 
 # git のトラブルシューティング
 
