@@ -39,5 +39,14 @@ sudo apt install fonts-ricty-diminished
 
 
 ## ショートカット mac
-```command+d``` 同じ行の同じワードを選択
 
+### 参考サイト
+[VS Code の便利なショートカットキー](https://qiita.com/12345/items/64f4372fbca041e949d0)
+  
+### 良く使うショートカット
+#### マルチライン編集
+```command+d``` 同じ行の同じワードを選択（マルチライン編集の個別版）
+```command+shift+l``` 一括ワード選択
+#### 画面操作
+```control+option+command+¥``` エディタ分割
+```option+command+<-|->``` タブの移動
