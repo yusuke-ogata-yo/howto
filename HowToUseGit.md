@@ -126,6 +126,14 @@ git push origin master
 git pull origin master
 ```
 
+## gitのエディターを指定
+```bash
+git config --global core.editer "vim --wait" // vimを指定
+```
+```bash
+git config --global core.editer "code --wait" // vscodeを指定
+```
+
 #### 参考サイト
 
 dotinstall.com  
