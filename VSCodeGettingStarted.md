@@ -36,3 +36,8 @@ sudo apt install fonts-ricty-diminished
 
 - scriptの読み込み  
 ```script:src```
+
+
+## ショートカット mac
+```command+d``` 同じ行の同じワードを選択
+
