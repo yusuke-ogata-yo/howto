@@ -62,6 +62,11 @@ error: src refspec xxx does not match any
 git push origin HEAD
 ```
 
+# add の取り消し
+```bash
+git checkout .
+```
+
 # git のトラブルシューティング
 
 ## git commit 時のエラーの対応
