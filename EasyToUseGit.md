@@ -67,6 +67,21 @@ git push origin HEAD
 git checkout .
 ```
 
+# ステージングの取り消し
+```bash
+git reset [fileName]
+```
+
+# 編集内容を破棄してステージングの取り消し
+```bash
+git reset --hard HEAD
+```
+
+コミットのバージョンを戻す
+```bash
+git reset --hard [commit id]
+```
+
 # git のトラブルシューティング
 
 ## git commit 時のエラーの対応
