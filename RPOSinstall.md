@@ -29,3 +29,24 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 ```bash
 command -v nvm
 ```
+
+## update npm
+```bash
+nvm install-latest-npm
+```
+```bash
+Attempting to upgrade to the latest working version of npm...
+* Installing latest `npm`; if this does not work on your node version, please report a bug!
+/home/pi/.nvm/versions/node/v13.11.0/bin/npm -> /home/pi/.nvm/versions/node/v13.11.0/lib/node_modules/npm/bin/npm-cli.js
+
+/home/pi/.nvm/versions/node/v13.11.0/bin/npx -> /home/pi/.nvm/versions/node/v13.11.0/lib/node_modules/npm/bin/npx-cli.js
+
++ npm@6.14.3
+added 2 packages from 2 contributors, removed 1 package and updated 12 packages in 27.233s
+* npm upgraded to: v6.14.3
+```
+
+## install gulp
+```bash
+npm install --global gulp-cli
+```
