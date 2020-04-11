@@ -22,3 +22,26 @@ kill %<job_number>
 kill <PID>
 ps -a (-a: 実行中プロセスの表示)
 ```
+
+# 負荷のかけ方
+```bash
+yes > /dev/null &
+jobs
+```
+
+# cpu 情報の表示
+```bash
+cat /proc/cpuinfo
+```
+```bash
+lscpu
+```
+
+# os の情報表示
+```bash
+cat /ect/os-release
+```
+```bash
+cat /proc/version
+uname -r
+```
