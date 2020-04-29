@@ -34,6 +34,8 @@ hotfix ブランチは、master のバグ修正を行うブランチ。hotfix �
   - [2.4. 緊急時の対応](#24-緊急時の対応)
 - [3. EoF](#3-eof)
 
+![git-flow コマンドツリー](./img/git-flow-commands.png)
+
 ## 2.1. 使い始め
 
 ```bash
