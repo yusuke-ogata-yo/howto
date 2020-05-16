@@ -1,12 +1,20 @@
-管理権限付きで、PowerShellを起動
-cmd で
+# How to change iTunes backup folder
 
-```
-mklink /J “%APPDATA%\Apple Computer\MobileSync\Backup” “E:\Backup”
+1. Start powershell with administrator privileges.
+2. Input ```cmd``` to have internal command in command prompt with administrator privileges.
+3. Input following command in the terminal.
+
+- iTunes backup folder path
+  - C:\Users\yusuk\AppData\Roaming\Apple Computer\MobileSync
+
+```bash
+cmd
+
+mklink /J “C:\Users\yusuk\AppData\Roaming\Apple Computer\MobileSync\Backup” “F:\iTunes\MobileSync\Backup”
 ```
 
 AWSの鍵置き場へのリンクをはりたい
-```
+```bash
 mklink /J “E:\privateKey” “\\ASBCREATE_NAS01\home\Drive\yusuke\web\privateKey”
 ```
 

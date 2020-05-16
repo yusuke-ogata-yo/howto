@@ -20,13 +20,15 @@
     - [2.3.3. イメージファイルのアップロード](#233-イメージファイルのアップロード)
     - [2.3.4. イメージファイルのpull](#234-イメージファイルのpull)
   - [2.4. docker-entrypoint.sh の書き方](#24-docker-entrypointsh-の書き方)
-  - [2.5. Dockerfile の書き方](#25-dockerfile-の書き方)
+  - [2.5. dockerfile の作成、ビルド](#25-dockerfile-の作成ビルド)
+    - [2.5.1. dockerfile の記載](#251-dockerfile-の記載)
+    - [2.5.2. `docker build`](#252-docker-build)
   - [2.6. コンテナのシェルに接続](#26-コンテナのシェルに接続)
     - [2.6.1. `docker exec` を使用する場合](#261-docker-exec-を使用する場合)
     - [2.6.2. `docker attach` を使用する場合](#262-docker-attach-を使用する場合)
 - [3. コンテナの情報](#3-コンテナの情報)
   - [3.1. コンテナのレイヤ情報](#31-コンテナのレイヤ情報)
-  - [コンテナの構成情報補表示](#コンテナの構成情報補表示)
+  - [3.2. コンテナの構成情報補表示](#32-コンテナの構成情報補表示)
 
 ## 1.1. コンテナについて
 
@@ -58,13 +60,15 @@ docker コンテナは、レイヤーによって構成されている。他の�
     - [2.3.3. イメージファイルのアップロード](#233-イメージファイルのアップロード)
     - [2.3.4. イメージファイルのpull](#234-イメージファイルのpull)
   - [2.4. docker-entrypoint.sh の書き方](#24-docker-entrypointsh-の書き方)
-  - [2.5. Dockerfile の書き方](#25-dockerfile-の書き方)
+  - [2.5. dockerfile の作成、ビルド](#25-dockerfile-の作成ビルド)
+    - [2.5.1. dockerfile の記載](#251-dockerfile-の記載)
+    - [2.5.2. `docker build`](#252-docker-build)
   - [2.6. コンテナのシェルに接続](#26-コンテナのシェルに接続)
     - [2.6.1. `docker exec` を使用する場合](#261-docker-exec-を使用する場合)
     - [2.6.2. `docker attach` を使用する場合](#262-docker-attach-を使用する場合)
 - [3. コンテナの情報](#3-コンテナの情報)
   - [3.1. コンテナのレイヤ情報](#31-コンテナのレイヤ情報)
-  - [コンテナの構成情報補表示](#コンテナの構成情報補表示)
+  - [3.2. コンテナの構成情報補表示](#32-コンテナの構成情報補表示)
 
 ## 2.1. イメージファイルの操作
 
@@ -156,7 +160,9 @@ env
 exec "$@"
 ```
 
-## 2.5. Dockerfile の書き方
+## 2.5. dockerfile の作成、ビルド
+
+### 2.5.1. dockerfile の記載
 
 ```bash
 FROM centos:7
@@ -169,6 +175,15 @@ RUN mv /var/tmp/docker-entrypoint.sh /usr/local/bin; \
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD["echo", "Hello World"]
 ```
+
+### 2.5.2. `docker build`
+
+```bash
+docker build -t reverse_proxy .
+```
+
+- `-t` はタグ名を指定するオプション
+- `.` はビルド資材の置き場所
 
 ## 2.6. コンテナのシェルに接続
 
@@ -204,7 +219,7 @@ docker run --name conntect-test -it -d ubuntu /bin/bash
 docker history [image_name]
 ```
 
-## コンテナの構成情報補表示
+## 3.2. コンテナの構成情報補表示
 
 ```bash
 docker inspect [image_name]
