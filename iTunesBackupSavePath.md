@@ -3,7 +3,7 @@
 1. Start powershell with administrator privileges.
 2. Input ```cmd``` to have internal command in command prompt with administrator privileges.
 3. Input following command in the terminal.
-
+**
 - mklink /J [src] [dst]
 
 - iTunes backup folder path
