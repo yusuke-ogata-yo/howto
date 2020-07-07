@@ -58,7 +58,8 @@ sudo apt-key fingerprint 0EBFCD88
 aptのソースリストにdockerを追加する。
 
 ```bash
-sudo vim /etc/apt/source-list.d/docker.list
+cd /etc/apt/source.list.d
+sudo vim docker.list
 ```
 
 ```vi
